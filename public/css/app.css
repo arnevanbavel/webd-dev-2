@@ -8382,27 +8382,6 @@ body {
 
 /* NAV STYLING */
 
-.cookie {
-  background-color: #e6cfb9;
-  padding: 25px;
-}
-
-.cookie .btn {
-  border-radius: 0;
-  padding: 8px 25px;
-}
-
-.cookie a {
-  cursor: pointer;
-}
-
-.cookie img {
-  height: 100px;
-  margin-top: 25px;
-  margin-right: 25px;
-  margin-bottom: 30px;
-}
-
 aside {
   position: fixed;
   width: 60px;
@@ -8425,6 +8404,14 @@ aside ul {
   padding: 0;
 }
 
+aside ul li {
+  padding: 11px;
+}
+
+aside ul li img {
+  margin-right: 15px;
+}
+
 aside .bottom {
   position: absolute;
   left: 0px;
@@ -8437,27 +8424,19 @@ aside .bottom strong {
   margin-bottom: 10px;
 }
 
-.glyphicon-envelope,
-.glyphicon-lock,
-.glyphicon-log-out {
-  font-size: 22px;
-  margin-right: 15px;
-}
-
-aside ul li {
-  padding: 11px;
-}
-
-aside ul li img {
-  margin-right: 15px;
-}
-
 aside a {
   color: white;
 }
 
 aside a:hover {
   color: inherit;
+}
+
+.glyphicon-envelope,
+.glyphicon-lock,
+.glyphicon-log-out {
+  font-size: 22px;
+  margin-right: 15px;
 }
 
 .nav-search:hover,
@@ -8498,5 +8477,196 @@ aside a:hover {
 
 .active-other a:hover {
   color: #5a5a5a;
+}
+
+/* CAROUSEL */
+
+.img-carousel {
+  background-image: url("/img/carousel/carous1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 400px;
+}
+
+.img-carousel2 {
+  background-image: url("/img/carousel/carous2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 400px;
+}
+
+.img-carousel3 {
+  background-image: url("/img/carousel/carous3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 400px;
+}
+
+.slider-progress {
+  width: 100%;
+  height: 3px;
+  background: #c9839a;
+}
+
+.slider-progress .progress {
+  width: 0%;
+  height: 3px;
+  background: #c2114b;
+  margin-top: 40px;
+}
+
+.slick-dots {
+  position: relative;
+  margin-top: -60px;
+}
+
+.slick-dots li {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 100%;
+  border: solid 2px grey;
+}
+
+.slick-dots li button {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  border: solid 1px grey;
+}
+
+.slick-dots li button,
+.slick-dots li button:before {
+  color: transparent;
+  opacity: 0;
+}
+
+.slick-dots li.slick-active {
+  background: black;
+}
+
+/* HOMEPAGE STYLING */
+
+.content-wrapper {
+  padding: 20px;
+  color: white;
+  background-color: #454545;
+  min-height: calc(100% - 400px);
+}
+
+.info {
+  text-align: center;
+  margin: 15px 75px;
+}
+
+.categories {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.categories a {
+  color: white;
+}
+
+.category {
+  font-size: 18px;
+}
+
+.category img {
+  height: 80px;
+  padding: 15px;
+}
+
+.divider-vertical {
+  border-right: solid 1px #5a5a5a;
+}
+
+.hot-item {
+  background-color: #5a5a5a;
+  padding: 5px;
+  margin: 5px 2px;
+}
+
+.hot-item .photo {
+  text-align: center;
+}
+
+.hot-items .col-md-3 {
+  padding: 0 2px;
+}
+
+.hot-items a {
+  color: white;
+}
+
+.hot-items-wrapper {
+  margin-bottom: 50px;
+}
+
+.photo {
+  height: 110px;
+  overflow: hidden;
+}
+
+.photo img {
+  height: 100%;
+}
+
+.hot-item-info {
+  padding: 5px 5px 0 5px;
+}
+
+.subscribe-info {
+  text-align: center;
+  background-image: url("/img/Patroon_A.jpg");
+  height: 100%;
+}
+
+.subscribe-info h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+
+.subscribe-form-wrapper {
+  background-color: #5a5a5a;
+  height: 100%;
+  padding: 20px;
+}
+
+.susbcribe-form {
+  margin: 10px 0;
+}
+
+.subscribe-wrapper {
+  height: 180px;
+}
+
+.subscribe {
+  margin: 15px 0;
+}
+
+.btn-subscribe,
+.subscribe input {
+  padding: 5px;
+}
+
+.subscribe input {
+  color: black;
+}
+
+.horizontal-divider {
+  border: 1px solid #5a5a5a;
+}
+
+.toggle-nav:hover {
+  cursor: pointer;
+}
+
+.wrapper {
+  margin-left: 50px;
+  height: 100%;
 }
 

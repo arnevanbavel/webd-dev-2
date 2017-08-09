@@ -7,6 +7,8 @@
     <title>Laravel</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link href="{{ asset('slick-1.6.0/slick/slick.css') }}" rel="stylesheet">
+    <link href="{{ asset('slick-1.6.0/slick/slick-theme.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -24,8 +26,10 @@
         </div>
 
     </div>
-    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('slick-1.6.0/slick/slick.min.js') }}"></script>
 
 </body>
 </html>

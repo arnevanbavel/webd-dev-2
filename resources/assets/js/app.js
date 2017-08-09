@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+require('./custom');
 
 window.Vue = require('vue');
 
@@ -21,13 +22,4 @@ const app = new Vue({
     el: '#app'
 });
 
-$('.nav-text').hide();
-$('.logo-kowloon').hide();
 
-$('.toggle-nav').click(function(){
-    $('aside').toggleClass("nav-extend");
-    $('.nav-text').toggle();
-    $('.logo-k').toggle();
-    $('.logo-kowloon').toggle();
-    $('li').toggleClass("nav-normal");
-})

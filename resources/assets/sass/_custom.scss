@@ -29,27 +29,6 @@ body {
 
 /* NAV STYLING */
 
-.cookie {
-    background-color: #e6cfb9;
-    padding: 25px;
-}
-
-.cookie .btn {
-    border-radius: 0;
-    padding: 8px 25px;
-}
-
-.cookie a {
-    cursor: pointer;
-}
-
-.cookie img {
-    height: 100px;
-    margin-top: 25px;
-    margin-right: 25px;
-    margin-bottom: 30px;
-}
-
 aside
 {
     position: fixed;
@@ -59,32 +38,45 @@ aside
     background-color: #323232;
     z-index: 100;
     color: white;
-}
+    
+    .top {
+        position: absolute;
+        width: 100%;
+        padding: 0 5px;
+    }
 
-aside .top {
-    position: absolute;
-    width: 100%;
-    padding: 0 5px;
-}
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
 
-aside ul
-{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
+        li{
+            padding: 11px;
 
-aside .bottom
-{
-    position: absolute;
-    left:0px;
-    bottom:0px;
-    margin-left: 7px;
-    width: 100%;
-}
+            img{
+                margin-right: 15px;
+            }
+        }
+    }
 
-aside .bottom strong {
-    margin-bottom: 10px;
+    .bottom {
+        position: absolute;
+        left:0px;
+        bottom:0px;
+        margin-left: 7px;
+        width: 100%;
+
+        strong {
+            margin-bottom: 10px;
+        }
+    }
+
+    a {
+        color: white;
+    }
+    a:hover {
+        color: inherit;
+    }
 }
 
 .glyphicon-envelope, .glyphicon-lock, .glyphicon-log-out {
@@ -92,26 +84,8 @@ aside .bottom strong {
     margin-right: 15px;
 }
 
-aside ul li
-{
-    padding: 11px;
-}
-
-aside ul li img
-{
-    margin-right: 15px;
-}
-
-aside a {
-    color: white;
-}
-
-aside a:hover {
-    color: inherit;
-}
-
 .nav-search:hover, .nav-FAQ:hover {
-    color: #5a5a5a;
+    color: $light-gray;
 }
 
 .nav-extend {
@@ -123,7 +97,7 @@ aside a:hover {
 }
 
 .nav-search, .nav-FAQ {
-    color: #5a5a5a;
+    color: $light-gray;
 }
 
 .active-FAQ, .active-search, .active-other {
@@ -139,9 +113,198 @@ aside a:hover {
 }
 
 .active-other a {
-    color: #5a5a5a;
+    color: $light-gray;
 }
 
 .active-other a:hover {
-    color: #5a5a5a;
+    color: $light-gray;
+}
+
+/* CAROUSEL */
+
+.img-carousel {
+    background-image: url('/img/carousel/carous1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    height: 400px;
+}
+
+.img-carousel2 {
+    background-image: url('/img/carousel/carous2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    height: 400px;
+}
+
+.img-carousel3 {
+    background-image: url('/img/carousel/carous3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    height: 400px;
+}
+
+.slider-progress {
+    width: 100%;
+    height: 3px;
+    background: #c9839a;
+        
+    .progress {
+        width: 0%;
+        height: 3px;    
+        background: #c2114b;
+        margin-top: 40px;
+    }
+}
+
+.slick-dots {
+    position: relative;
+    margin-top: -60px;
+
+        li {
+        width: 12px;
+        height: 12px;
+        background: white;
+        border-radius: 100%;
+        border: solid 2px grey;
+
+        button {
+            width: 12px;
+            height: 12px;
+            border-radius: 100%;
+            border: solid 1px grey;
+        }
+
+        button, button:before {
+            color: transparent;
+            opacity: 0;
+        }
+    }
+}
+
+.slick-dots li.slick-active {
+  background: black;
+}
+
+/* HOMEPAGE STYLING */
+
+.content-wrapper {
+    padding: 20px;
+    color: white;
+    background-color: #454545;
+    min-height: calc(100% - 400px);
+}
+
+.info {
+    text-align: center;
+    margin: 15px 75px;
+}
+
+.categories {
+    text-align: center;
+    margin: 30px 0;
+    
+    a {
+        color: white;
+    }
+}
+
+.category {
+    font-size: 18px;
+
+    img {
+        height: 80px;
+        padding: 15px;
+    }
+}
+
+.divider-vertical {
+    border-right: solid 1px $light-gray;
+}
+
+.hot-item {
+    background-color: $light-gray;
+    padding: 5px;
+    margin: 5px 2px;
+    
+    .photo {
+        text-align: center;
+    }
+}
+
+.hot-items .col-md-3 {
+    padding: 0 2px;
+}
+
+.hot-items a {
+    color: white;
+}
+
+.hot-items-wrapper {
+    margin-bottom: 50px;
+}
+
+.photo {
+    height: 110px;
+    overflow: hidden;
+}
+
+.photo img {
+    height: 100%;
+}
+
+.hot-item-info {
+    padding: 5px 5px 0 5px;
+}
+
+.subscribe-info {
+    text-align: center;
+    background-image: url('/img/Patroon_A.jpg');
+    height: 100%;
+}
+
+.subscribe-info h1 {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.subscribe-form-wrapper {
+    background-color: $light-gray;
+    height: 100%;
+    padding: 20px;
+}
+
+.susbcribe-form {
+    margin: 10px 0;
+}
+
+.subscribe-wrapper {
+    height: 180px;
+}
+
+.subscribe {
+    margin: 15px 0;
+}
+
+.btn-subscribe, .subscribe input {
+    padding: 5px;
+}
+
+.subscribe input {
+    color: black;
+}
+
+.horizontal-divider {
+    border: 1px solid $light-gray;
+}
+
+.toggle-nav:hover {
+    cursor: pointer;
+}
+
+.wrapper {
+    margin-left: 50px;
+    height: 100%;
 }
