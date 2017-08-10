@@ -16,16 +16,7 @@
     </div>
  	<div class="content-wrapper clearfix">
         <div class="col-md-10 col-md-offset-1">
-            @if (session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
-            @endif
-            @if ($errors->has('email'))
-                <div class="alert alert-danger">
-                    Email was not sent. {{ $errors->first('email') }}
-                </div>
-            @endif
+            @include('inc.message')
             <div class="info">
                 <p>{{ Lang::get('info.intro') }}</p>
             </div>
