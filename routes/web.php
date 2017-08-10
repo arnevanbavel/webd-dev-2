@@ -19,3 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/subscribe', 'HomeController@subscribe');
+
+Route::get('/admin', 'AdminController@index');
+Route::get('/admin/products', 'AdminController@showProducts');
+Route::get('/admin/product/create', 'AdminController@showNewProduct');
+Route::post('/admin/product/create', 'AdminController@createProduct');

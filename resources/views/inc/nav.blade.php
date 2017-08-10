@@ -58,7 +58,7 @@
             <ul class="bottom">
                 @if(Auth::check() && Auth::user()->admin())
                     <li class="nav-normal">
-                        <a href="{{ url('admindashboard') }}">
+                        <a href="{{ url('admin') }}">
                             <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
                             <strong class="nav-text">Dashboard</strong>
                         </a>
