@@ -13,7 +13,17 @@ class CreateProductsTabel extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('products', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name')->unique;
+            $table->string('prijs');
+            $table->text('korteBeschrijving');
+            $table->text('uitleg');
+            $table->string('link');
+            $table->integer('categorie_id');
+            $table->integer('tag_id');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +33,6 @@ class CreateProductsTabel extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('products');
     }
 }

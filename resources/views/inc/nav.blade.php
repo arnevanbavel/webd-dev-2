@@ -56,7 +56,7 @@
             </div>
 
             <ul class="bottom">
-                @if(Auth::check() && Auth::user()->isAdmin())
+                @if(Auth::check() && Auth::user()->admin())
                     <li class="nav-normal">
                         <a href="{{ url('admindashboard') }}">
                             <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>

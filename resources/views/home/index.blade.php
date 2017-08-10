@@ -22,9 +22,14 @@
             </div>
 
             <div class="categories clearfix">
-				<!--categories-->
-				<!--categories-->
-				<!--categories-->  
+                @foreach($categories as $categorie)
+                    <div class="category col-md-2 divider-vertical">
+                        <a href="{{ url('categories', $categorie->url) }}">
+                            <img src="img/menu/{{$categorie->photo}}">
+                            <p>{{ $categorie->name }}</p>
+                        </a>
+                    </div>
+                @endforeach 
             </div>
 
             <div class="hot-items-wrapper clearfix">

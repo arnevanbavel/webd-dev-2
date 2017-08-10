@@ -17,9 +17,7 @@ class CreateCategoriesTabel extends Migration
             $table->increments('id');
             $table->string('url');
             $table->string('name');
-            $table->string('meervoudnaam');
-            $table->string('kleur');
-            $table->string('wit');
+            $table->string('photo');
             $table->timestamps();
         });
     }
