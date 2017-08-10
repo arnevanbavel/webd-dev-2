@@ -22,6 +22,7 @@ class AdminController extends Controller
     public function showNewProduct()
     {
         $categories = Categorie::all();
+        
         return view('admin.products_create')
         ->with('categories', $categories);
     }
