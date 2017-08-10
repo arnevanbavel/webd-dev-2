@@ -14,4 +14,9 @@ class Product extends Model
         return $this->belongsToMany('App\Color');
     }
 
+    public function Tag(){
+        return $this->belongsTo('App\Tag');
+    }
+
+
 }
