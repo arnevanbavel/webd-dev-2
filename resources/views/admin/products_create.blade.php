@@ -61,10 +61,10 @@
 						@endif
 					</div>
 					<div class="form-group {{ $errors->has('tag_id') ? 'has-error' : '' }}">
-						<label>Categorie</label>
+						<label>Tag</label>
 						<select class="form-control" name="tag_id">
 							@foreach($tags as $tag)
-								<option @if(old('tag_id') == $tag->id) selected @endif value="{{ $tag->id }}">{{ $tag->displayName }}</option>
+								<option @if(old('tag_id') == $tag->id) selected @endif value="{{ $tag->id }}">{{ $tag->name }}</option>
 							@endforeach
 						</select>
 						@if ($errors->has('tag_id'))
