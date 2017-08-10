@@ -10,7 +10,7 @@
 
 			<div class="new-product">
 
-				<form method="POST" action="{{ url('admindashboard/product/new') }}" enctype="multipart/form-data">
+				<form method="POST" action="{{ url('/admin/product/create') }}" enctype="multipart/form-data">
 					{{ csrf_field() }}
 					<div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
 						<label>Product naam</label>
@@ -19,25 +19,25 @@
 							<span class="help-block"><strong>{{ $errors->first('name') }}</strong></span>
 						@endif
 					</div>
-					<div class="form-group {{ $errors->has('price') ? 'has-error' : '' }}">
+					<div class="form-group {{ $errors->has('prijs') ? 'has-error' : '' }}">
 						<label>Prijs</label>
-						<input type="number" class="form-control" min="0" step="0.01" name="price" value="{{ old('price') }}">
-						@if ($errors->has('price'))
-							<span class="help-block"><strong>{{ $errors->first('price') }}</strong></span>
+						<input type="number" class="form-control" min="0" step="0.01" name="prijs" value="{{ old('prijs') }}">
+						@if ($errors->has('prijs'))
+							<span class="help-block"><strong>{{ $errors->first('prijs') }}</strong></span>
 						@endif
 					</div>
-					<div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
-						<label>Descriptie</label>
-						<textarea class="form-control" name="description" rows="5">{{ old('description') }}</textarea>
-						@if ($errors->has('description'))
-							<span class="help-block"><strong>{{ $errors->first('description') }}</strong></span>
+					<div class="form-group {{ $errors->has('korteBeschrijving') ? 'has-error' : '' }}">
+						<label>Beschrijving</label>
+						<textarea class="form-control" name="korteBeschrijving" rows="5">{{ old('korteBeschrijving') }}</textarea>
+						@if ($errors->has('korteBeschrijving'))
+							<span class="help-block"><strong>{{ $errors->first('korteBeschrijving') }}</strong></span>
 						@endif
 					</div>
-					<div class="form-group {{ $errors->has('technicalText') ? 'has-error' : '' }}">
-						<label>Technische tekst</label>
-						<textarea class="form-control" name="technicalText" rows="5">{{ old('technicalText') }}</textarea>
-						@if ($errors->has('technicalText'))
-							<span class="help-block"><strong>{{ $errors->first('technicalText') }}</strong></span>
+					<div class="form-group {{ $errors->has('uitleg') ? 'has-error' : '' }}">
+						<label>Specificaties</label>
+						<textarea class="form-control" name="uitleg" rows="5">{{ old('uitleg') }}</textarea>
+						@if ($errors->has('uitleg'))
+							<span class="help-block"><strong>{{ $errors->first('uitleg') }}</strong></span>
 						@endif
 					</div>
 					<div class="form-group {{ $errors->has('photo') ? 'has-error' : '' }}">

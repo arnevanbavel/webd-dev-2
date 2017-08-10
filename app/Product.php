@@ -18,5 +18,9 @@ class Product extends Model
         return $this->belongsTo('App\Tag');
     }
 
+    public function Photos(){
+        return $this->hasMany('App\Photo');
+    }
+
 
 }
