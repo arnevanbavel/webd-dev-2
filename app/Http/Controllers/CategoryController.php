@@ -11,6 +11,19 @@ use DB;
 
 class CategoryController extends Controller
 {
+    
+    public function show(Categorie $category, Product $product, Request $request)
+    {   
+        if ($request->cookie('language')) {
+            $language = $request->cookie('language');
+
+            Lang::setLocale($language);
+        } 
+
+        $products = Product::where('categorie_id', '=', $category->id)->take(4)->get();
+        return view('categories.showProduct', compact('product', 'products', 'category'));
+    }
+
     public function index(Categorie $category, Request $request)
     {
     	DB::enableQueryLog();
@@ -31,9 +44,9 @@ class CategoryController extends Controller
             if ($tagsExplode[0] == "") {
                 switch ($sort) {
                     case "relevance":
-                        $products = Product::with('photos')->orWhere(function ($query) use($categorie, $minValue, $maxValue) 
+                        $products = Product::with('photos')->orWhere(function ($query) use($category, $minValue, $maxValue) 
                         {
-                                $query->orWhere([['categorie_id', '=', $categorie->id], ['prijs', '>', $minValue], ['prijs', '<', $maxValue]]);
+                                $query->orWhere([['categorie_id', '=', $category->id], ['prijs', '>', $minValue], ['prijs', '<', $maxValue]]);
                         })->paginate(12);
                         break;
                     case "lowToHigh":
@@ -57,26 +70,26 @@ class CategoryController extends Controller
             else {
                 switch ($sort) {
                     case "relevance":
-                        $products = Product::with('photos')->orWhere(function ($query) use($categorie, $tagsExplode, $minValue, $maxValue) {
+                        $products = Product::with('photos')->orWhere(function ($query) use($category, $tagsExplode, $minValue, $maxValue) {
                                 foreach ($tagsExplode as $tag) 
                                 {
-                                    $query->orWhere([['categorie_id', '=', $categorie->id], ['tag_id', '=', $tag], ['prijs', '>', $minValue], ['prijs', '<', $maxValue]]);
+                                    $query->orWhere([['categorie_id', '=', $category->id], ['tag_id', '=', $tag], ['prijs', '>', $minValue], ['prijs', '<', $maxValue]]);
                                 }
                             })
 
                         ->paginate(12);
                         break;
                     case "lowToHigh":
-                        $products = $this->filterProductsWithTags($categorie, $tagsExplode, $minValue, $maxValue, "prijs", "DESC");
+                        $products = $this->filterProductsWithTags($category, $tagsExplode, $minValue, $maxValue, "prijs", "DESC");
                         break;
                     case "highToLow":
-                        $products = $this->filterProductsWithTags($categorie, $tagsExplode, $minValue, $maxValue, "prijs", "ASC");
+                        $products = $this->filterProductsWithTags($category, $tagsExplode, $minValue, $maxValue, "prijs", "ASC");
                         break;
                     case "latest":
-                        $products = $this->filterProductsWithTags($categorie, $tagsExplode, $minValue, $maxValue, "created_at", "DESC");
+                        $products = $this->filterProductsWithTags($category, $tagsExplode, $minValue, $maxValue, "created_at", "DESC");
                         break;
                     case "oldest":
-                        $products = $this->filterProductsWithTags($categorie, $tagsExplode, $minValue, $maxValue, "created_at", "ASC");
+                        $products = $this->filterProductsWithTags($category, $tagsExplode, $minValue, $maxValue, "created_at", "ASC");
                         break;
                 }
 

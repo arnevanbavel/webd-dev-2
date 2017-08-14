@@ -24,7 +24,7 @@ class Product extends Model
 
     public function getRouteKeyName()
     {
-        return 'url';
+        return 'link';
     }
 
 
