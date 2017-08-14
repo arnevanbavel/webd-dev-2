@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Lang;
 use Illuminate\Http\Request;
 use App\Categorie;
 use App\Product;

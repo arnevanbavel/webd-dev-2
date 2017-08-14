@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Subscriber;
+use Lang;
 use Mail;
 use App\Categorie;
 
@@ -67,5 +68,12 @@ class HomeController extends Controller
         }
 
         return back()->with('success', 'U bent succesvol geabonneerd op onze nieuwsbrief!');
+    }
+
+    public function lang(Request $request)
+    {
+        $language = $request->lang;
+
+        return back()->withCookie(cookie()->forever('language', $language));;
     }
 }

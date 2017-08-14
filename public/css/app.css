@@ -8872,3 +8872,193 @@ aside a:hover {
   color: black;
 }
 
+.product-wrapper {
+  background-color: #454545;
+  min-height: 100%;
+  color: white;
+  padding-bottom: 50px;
+}
+
+.product-pictures {
+  background-color: #5a5a5a;
+  margin-bottom: 15px;
+}
+
+.product-pictures {
+  margin-right: 10px;
+  padding: 2.5px;
+}
+
+.product-info {
+  margin-left: 10px;
+  padding: 2.5px;
+  margin-bottom: 15px;
+}
+
+.product-wrapper .product {
+  margin-top: 30px;
+}
+
+.product .col-md-6,
+.product .col-md-4 {
+  padding: 0;
+}
+
+.main-picture {
+  height: 200px;
+  margin: 2.5px;
+  overflow: hidden;
+}
+
+.main-picture img {
+  height: 200px;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  margin-top: 2%;
+}
+
+.lightbox:target {
+  outline: none;
+  display: block;
+}
+
+.other-picture {
+  height: 70px;
+  margin: 2.5px;
+  overflow: hidden;
+}
+
+.other-picture img {
+  height: 100%;
+}
+
+.picture-name {
+  margin: 2.5px;
+}
+
+.product-tags ul li {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 3px;
+}
+
+.product-tags ul li:not(:first-child) {
+  background-color: #323232;
+}
+
+.product-tags {
+  color: #cecece;
+}
+
+.product-tags ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.product-tags h2 {
+  margin: 0;
+}
+
+.product-name {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.product-price {
+  margin-top: 0;
+}
+
+.product-specifications {
+  border: solid 1px grey;
+  padding: 10px;
+}
+
+.product-specifications h5 {
+  margin-top: 0;
+}
+
+.product-specifications ul li {
+  list-style-type: none;
+}
+
+.product-dimensions li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.product .col-md-12 {
+  padding: 0;
+}
+
+.related-product {
+  background-color: #5a5a5a;
+  padding: 5px;
+}
+
+.related-products a {
+  color: white;
+}
+
+.related-product-picture {
+  height: 100px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.related-product .product-name {
+  padding: 5px 5px 0 5px;
+}
+
+.related-product-picture img {
+  height: 100%;
+}
+
+.related-products,
+.product-FAQ-wrapper {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.product-FAQ {
+  background-color: #717171;
+  padding: 15px 15px 5px 15px;
+  margin-bottom: 15px;
+}
+
+.product-FAQ h5 {
+  margin: 0;
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+
+.product-answer {
+  margin-left: 20px;
+}
+
+.product-FAQ-wrapper .pull-right a {
+  color: white;
+}
+
+.product-wrapper .subscribe-wrapper {
+  margin-top: 15px;
+}
+
+.related-products .col-md-3 {
+  margin-bottom: 10px;
+}
+

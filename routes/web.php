@@ -26,3 +26,7 @@ Route::get('/admin', 'AdminController@index');
 Route::get('/admin/products', 'AdminController@showProducts');
 Route::get('/admin/product/create', 'AdminController@showNewProduct');
 Route::post('/admin/product/create', 'AdminController@createProduct');
+
+
+//https://laravel.com/docs/5.4/localization
+Route::get('language', 'HomeController@lang');

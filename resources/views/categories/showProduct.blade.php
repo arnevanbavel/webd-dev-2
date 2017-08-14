@@ -57,20 +57,20 @@
 						<div class="product-tags">
 							<ul>
 								<li><h2>K</h2></li>
-								<li>{{ $category->pluralName }}</li>
-								<li>{{ $product->Tag->displayName }}</li>
+								<li>{{ $category->name }}</li>
+								<li>{{ $product->Tag->name }}</li>
 							</ul>
 						</div>
 
 						<h1 class="product-name">{{ strtoupper($product->name) }}</h1>
-						<h4 class="product-price">€ {{ $product->price }}</h4>
+						<h4 class="product-price">€ {{ $product->prijs }}</h4>
 
 						<div class="product-colors">
 							<h5>{{ Lang::get('product.colors') }}</h5>
 							<ul>
 								@foreach($product->colors as $color)
 									<li>
-										<div class="product-color" style="background-color: {{ $color->hexa }};"></div>
+										<div class="product-color" style="background-color: {{ $color->code }};"></div>
 									</li>
 								@endforeach
 							</ul>
@@ -78,7 +78,7 @@
 
 						<div class="product-description">
 							<h5>{{ Lang::get('product.description') }}</h5>
-							{{ $product->description }}
+							{{ $product->kortebeschrijving }}
 						</div>
 
 					</div>
@@ -87,9 +87,9 @@
 				<div class="col-md-12">
 					<div class="product-specifications">
 						<h5>{{ Lang::get('product.specifications') }}</h5>
-						<h6>TITEL</h6>
+						<h6>Specificaties</h6>
 						<ul>
-							<li>{{ $product->technicalText }}</li>
+							<li>{{ $product->uitleg }}</li>
 						</ul>
 					</div>
 				</div>
@@ -105,13 +105,13 @@
 				@foreach($products as $relatedProduct)
 
 					@if($product->id != $relatedProduct->id)
-						<a href="{{ url('categories', [$category->url, 'product', $relatedProduct->url]) }}">
+						<a href="{{ url('categories', [$category->url, 'product', $relatedProduct->link]) }}">
 							<div class="col-md-3">
 								<div class="related-product">
 									<div class="related-product-picture">
 										@if(count($relatedProduct->photos) < 1) <img src="{{ url('img/Home_img2.png') }}"> @else <img src="{{ url('uploads/products', $relatedProduct->photos[0]->name) }}"> @endif
 									</div>
-									<div class="product-name clearfix"> {{ $relatedProduct->name }}	<div class="pull-right"> €{{ $relatedProduct->price }} </div></div>
+									<div class="product-name clearfix"> {{ $relatedProduct->name }}	<div class="pull-right"> €{{ $relatedProduct->prijs }} </div></div>
 								</div>
 							</div>
 						</a>
