@@ -38,14 +38,14 @@ class AdminController extends Controller
     public function createProduct(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required|unique:products,name',
-            'prijs' => 'required|numeric',
-            'korteBeschrijving' => 'required',
-            'category_id' => 'required',
-            'tag_id' => 'required',
-            'uitleg' => 'required',
-            //'photo' => 'required|mimes:jpg,jpeg,png|max:5120',
-            'color_id' => 'required'
+            'name' 						=> 'required|unique:products,name',
+            'prijs' 					=> 'required|numeric',
+            'korteBeschrijving' 		=> 'required',
+            'category_id' 				=> 'required',
+            'tag_id' 					=> 'required',
+            'uitleg' 					=> 'required',
+            //'photo' 					=> 'required|mimes:jpg,jpeg,png|max:5120',
+            'color_id' 					=> 'required'
         ]);
 
         $product 						= new Product();
@@ -80,10 +80,9 @@ class AdminController extends Controller
           
         }
 
-        $colors = $request->color_id;
-
-        foreach($colors as $color) {
-            $product->Colors()->attach($color);
+        $GeselecteerdeKleuren = $request->color_id;
+        foreach($GeselecteerdeKleuren as $GeselecteerdeKleur) {
+            $product->Colors()->attach($GeselecteerdeKleuren);
         }        
 
         return redirect('admin/products')->with('success', 'Product is succesvol aangemaakt.');

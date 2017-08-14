@@ -14,6 +14,7 @@
 Route::get('/', 'HomeController@index');
 
 Route::get('categories/{category}', 'CategoryController@index');
+Route::post('categories/{category}/search', 'CategoryController@filter');
 
 Auth::routes();
 

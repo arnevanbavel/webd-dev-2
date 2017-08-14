@@ -10,4 +10,9 @@ class Categorie extends Model
     {
         return $this->hasMany('App\Product');
     }
+
+    public function getRouteKeyName()
+	{
+	    return 'url';
+	}
 }
