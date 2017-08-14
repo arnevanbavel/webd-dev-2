@@ -30,3 +30,6 @@ Route::post('/admin/product/create', 'AdminController@createProduct');
 
 //https://laravel.com/docs/5.4/localization
 Route::get('language', 'HomeController@lang');
+
+Route::get('/search', 'ZoekController@index');
+Route::post('/search', 'ZoekController@zoek');
