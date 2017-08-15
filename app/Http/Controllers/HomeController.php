@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Subscriber;
 use Lang;
 use Mail;
+use App\HotItem;
 use App\Categorie;
 
 class HomeController extends Controller
@@ -28,9 +29,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $hotItems = HotItem::orderBy('place', 'ASC')->get();
         $categories = Categorie::All();
-
-        return view('home.index')->with('categories',$categories);
+        return view('home.index')
+        ->with('hotItems',$hotItems)
+        ->with('categories',$categories);
     }
 
     public function subscribe(Request $request)
@@ -74,6 +77,7 @@ class HomeController extends Controller
     {
         $language = $request->lang;
 
-        return back()->withCookie(cookie()->forever('language', $language));;
+        return back()->withCookie(cookie()->forever('language', $language));
     }
+
 }

@@ -26,6 +26,8 @@ Route::get('/admin', 'AdminController@index');
 Route::get('/admin/products', 'AdminController@showProducts');
 Route::get('/admin/product/create', 'AdminController@showNewProduct');
 Route::post('/admin/product/create', 'AdminController@createProduct');
+Route::get('/admin/product/edit/{product}', 'AdminController@editProduct'); //naar pagina om aante passen
+Route::post('/admin/product/edit/{product}', 'AdminController@updateProduct'); //updaten van het product na het aanpassen
 
 
 //https://laravel.com/docs/5.4/localization

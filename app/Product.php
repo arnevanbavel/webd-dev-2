@@ -22,6 +22,10 @@ class Product extends Model
         return $this->hasMany('App\Photo');
     }
 
+    public function HotItems(){
+        return $this->hasMany('App\HotItem');
+    }
+
     public function getRouteKeyName()
     {
         return 'link';

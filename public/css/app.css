@@ -9130,3 +9130,101 @@ aside a:hover {
   margin-top: 0;
 }
 
+.dashboard-wrapper,
+.dashboard-products-wrapper,
+.dashboard-hotproducts-wrapper,
+.dashboard-faq-wrapper {
+  background-color: #f6f6f6;
+  min-height: 100%;
+}
+
+.dashboard,
+.dashboard-products,
+.dashboard-hotproducts,
+.dashboard-faq {
+  padding-top: 50px;
+}
+
+.dashboard h1,
+.dashboard-products h1,
+.dashboard-hotproducts h1,
+.dashboard-faq h1 {
+  color: #e27500;
+}
+
+.dashboard h4 a {
+  color: #333;
+}
+
+.FAQ-edit {
+  text-align: center;
+}
+
+.FAQ-edit ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.FAQ-edit ul li {
+  padding: 5px;
+}
+
+.FAQ-edit ul li a,
+.FAQ-edit ul li button {
+  width: 100%;
+}
+
+.new-FAQ,
+.edit-FAQ,
+.new-product,
+.edit-product,
+.products-table,
+.hotproducts-table {
+  background-color: white;
+  margin: 15px 0;
+  padding: 15px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.products-table ul,
+.hotproducts-table ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.products-table ul li,
+.hotproducts-table ul li {
+  padding: 5px;
+}
+
+.products-table ul li a,
+.products-table ul li button,
+.hotproducts-table ul li a,
+.hotproducts-table ul li button {
+  width: 100%;
+}
+
+.new-product table ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.form-group .photo {
+  margin: 10px 0;
+}
+
+.color-field ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.color-field input[type=checkbox] {
+  margin-right: 10px;
+}
+
+.dimensions {
+  display: block;
+  margin: 10px 0;
+}
+

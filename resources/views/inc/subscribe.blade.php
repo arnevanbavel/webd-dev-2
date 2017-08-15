@@ -1,13 +1,13 @@
             <div class="subscribe-wrapper">
 
                 <div class="subscribe-info col-md-8">
-                    <h1><strong>{{ Lang::get('subscribe.deals') }}</strong></h1>
-                    <h4>{{ Lang::get('subscribe.only') }}</h4>
+                    <h1><strong>{{ Lang::get('product.deals') }}</strong></h1>
+                    <h4>{{ Lang::get('product.only') }}</h4>
                 </div>
 
                 <div class="subscribe-form-wrapper col-md-4">
                     <div class="susbcribe-form">
-                        <h4>{{ Lang::get('subscribe.subscribe') }}</h4>
+                        <h4>{{ Lang::get('product.subscribe') }}</h4>
                         Lorum ipsum dolor sit amet...
                         <form method="POST" action="{{ url('/subscribe') }}" class="subscribe">
                             {{ csrf_field() }}
