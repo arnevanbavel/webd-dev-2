@@ -8364,6 +8364,9 @@ body {
 
 .container {
   height: 100%;
+  width: 100% !important;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .form-validation {
