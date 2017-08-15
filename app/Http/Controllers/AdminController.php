@@ -9,12 +9,14 @@ use App\Color;
 use App\Tag;
 use App\Photo;
 use App\HotItem;
+use App\Subscriber;
 
 class AdminController extends Controller
 {
     public function index()
-    {
-    	return view('admin.index');
+    {   
+        $subscribers = Subscriber::all();
+    	return view('admin.index')->with('subscribers',$subscribers);
     }
 
     public function showProducts()

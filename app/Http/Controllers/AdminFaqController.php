@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Faq;
+use App\Product;
+use App\FaqProduct;
 use DB;
 
 class AdminFaqController extends Controller
@@ -65,6 +67,32 @@ class AdminFaqController extends Controller
         $faq->save();
 
         return redirect('admin/faq')->with('success', 'FAQ is succesvol gewijzigd.');
+    }
+
+    //////////////////FAG PRODUCT///////////////////////////
+
+    public function toonFaqsVoorProduct(Product $product)
+    {
+        $faqs = Faq::all();
+        return view('adminFAQ.faq_product', compact('product', 'faqs'));
+    }
+
+    public function updateFaqVoorProduct($product, $faq)
+    {
+        $faqProduct = new FaqProduct();
+        $faqProduct->product_id = $product;
+        $faqProduct->faq_id = $faq;
+
+        $faqProduct->save();
+
+        return back()->with('success', 'FAQ is succesvol aangewezen.');
+    }
+
+    public function verwijderenFaqVanProduct(Product $product, $faqproduct)
+    {
+        $product->Faqs()->detach($faqproduct);
+
+        return back()->with('success', 'FAQ is succesvol verwijderd van het product.');
     }
 
 }

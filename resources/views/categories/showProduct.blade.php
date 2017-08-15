@@ -126,10 +126,16 @@
 					<div class="alert alert-info">{{ Lang::get('product.noFaq') }}</div>
 				@endif
 				<div class="product-FAQs">
-					<!--FAQS-->
-					<!--FAQS-->
-					<!--FAQS-->
-					<!--FAQS-->
+					@foreach($product->Faqs as $faq)
+						<div class="product-FAQ">
+							<div class="product-question">
+								<h5 class="FAQ-slide-toggle"><strong>{{ $faq->question }}</strong></h5>
+							</div>
+							<div class="product-answer">
+								{{ $faq->answer }}
+							</div>
+						</div>
+					@endforeach
 				</div>
 				<div class="pull-right">
 					<a href="{{ url('FAQ') }}">{{ Lang::get('product.more') }}</a>
