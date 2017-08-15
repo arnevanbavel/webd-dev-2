@@ -222,4 +222,21 @@ class AdminController extends Controller
 
         return redirect('admin/products')->with('success', 'Product is succesvol aangepast.');
     }
+
+    public function deleteProduct(Product $product)
+    {
+        $product->Colors()->detach();
+
+        $productId = $product->id;
+
+        $hotItem = HotItem::where('product_id', '=', $productId)->first();
+        if ($hotItem != null) {
+            return back()->with('error', 'U probeert een hot item te verwijderen, verwissel eerst het product en verwijder het dan pas.');
+        }
+
+        if(!$product->delete()) {
+            return back()->with('error', 'Product is niet succesvol verwijderd.');
+        }
+        return back()->with('success', 'Product is succesvol verwijderd.');
+    }
 }

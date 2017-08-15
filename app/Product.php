@@ -25,7 +25,7 @@ class Product extends Model
     public function HotItems(){
         return $this->hasMany('App\HotItem');
     }
-
+    
     public function Faqs(){
         return $this->belongsToMany('App\Faq');
     }

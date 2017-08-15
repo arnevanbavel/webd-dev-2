@@ -23,11 +23,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/subscribe', 'HomeController@subscribe');
 
 Route::get('/admin', 'AdminController@index');
-Route::get('/admin/products', 'AdminController@showProducts');
-Route::get('/admin/product/create', 'AdminController@showNewProduct');
-Route::post('/admin/product/create', 'AdminController@createProduct');
-Route::get('/admin/product/edit/{product}', 'AdminController@editProduct'); //naar pagina om aante passen
-Route::post('/admin/product/edit/{product}', 'AdminController@updateProduct'); //updaten van het product na het aanpassen
+Route::get('/admin/products', 'AdminController@showProducts');						// tonen van alle products
+Route::get('/admin/product/create', 'AdminController@showNewProduct'); 				//naar pagina om een product aan te maken
+Route::post('/admin/product/create', 'AdminController@createProduct'); 				//product aanmaken
+Route::get('/admin/product/edit/{product}', 'AdminController@editProduct'); 		//naar pagina om aante passen
+Route::post('/admin/product/edit/{product}', 'AdminController@updateProduct'); 		//updaten van het product na het aanpassen
+Route::delete('/admin/product/delete/{product}', 'AdminController@deleteProduct'); 	//delete product
 
 
 //https://laravel.com/docs/5.4/localization
