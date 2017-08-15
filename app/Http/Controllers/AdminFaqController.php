@@ -11,7 +11,7 @@ class AdminFaqController extends Controller
     public function showFaq()
     {
         $faqs = DB::table('faqs')->paginate(5);
-    	return view('adminFAQ.index')
+    	return view('adminFAQ.faq_show')
     	->with('faqs',$faqs);
     }
 
@@ -38,6 +38,33 @@ class AdminFaqController extends Controller
 
         return redirect('admin/faq')->with('success', 'FAQ is succesvol aangemaakt.');
 
+    }
+
+    public function deleteFaq(Faq $faq)
+    {
+        $faq->delete();
+
+        return back()->with('success', 'FAQ is succesvol verwijderd.');
+    }
+
+    public function editFaq(Faq $faq)
+    {
+        return view('adminFAQ.faq_edit', compact('faq'));
+    }
+
+    public function updateFaq(Request $request, Faq $faq)
+    {
+        $this->validate($request, [
+            'question' => 'required',
+            'answer' => 'required',
+        ]);
+
+        $faq->question = $request->question;
+        $faq->answer = $request->answer;
+
+        $faq->save();
+
+        return redirect('admin/faq')->with('success', 'FAQ is succesvol gewijzigd.');
     }
 
 }

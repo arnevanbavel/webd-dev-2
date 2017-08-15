@@ -36,6 +36,9 @@ Route::get('language', 'HomeController@lang');
 Route::get('/search', 'ZoekController@index');
 Route::post('/search', 'ZoekController@zoek');
 
-Route::get('/admin/faq', 'AdminFaqController@showfaq');
-Route::get('/admin/faq/new', 'AdminFaqController@showNewFaq');
-Route::post('/admin/faq/new', 'AdminFaqController@createFaq');
+Route::get('/admin/faq', 'AdminFaqController@showfaq');					//Tonen van alle faqs
+Route::get('/admin/faq/new', 'AdminFaqController@showNewFaq');			// naar pagina om een faq aan te maken
+Route::post('/admin/faq/new', 'AdminFaqController@createFaq');			//faq aanmaken
+Route::delete('/admin/faq/delete/{faq}', 'AdminFaqController@deleteFaq');	//faq verwijderen
+Route::get('/admin/faq/edit/{faq}', 'AdminFaqController@editFaq');			//naar pagina om faq aan te passen
+Route::post('/admin/faq/edit/{faq}', 'AdminFaqController@updateFaq');		// updaten van faq na het aanpassen
