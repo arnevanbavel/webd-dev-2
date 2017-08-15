@@ -30,9 +30,12 @@ Route::get('/admin/product/edit/{product}', 'AdminController@editProduct'); 		//
 Route::post('/admin/product/edit/{product}', 'AdminController@updateProduct'); 		//updaten van het product na het aanpassen
 Route::delete('/admin/product/delete/{product}', 'AdminController@deleteProduct'); 	//delete product
 
-
 //https://laravel.com/docs/5.4/localization
 Route::get('language', 'HomeController@lang');
 
 Route::get('/search', 'ZoekController@index');
 Route::post('/search', 'ZoekController@zoek');
+
+Route::get('/admin/faq', 'AdminFaqController@showfaq');
+Route::get('/admin/faq/new', 'AdminFaqController@showNewFaq');
+Route::post('/admin/faq/new', 'AdminFaqController@createFaq');
