@@ -75,7 +75,7 @@
 										@endif
 										<img src="{{ url('uploads/products', $product->photos[0]->name) }}">
 									@else
-										<img src="{{ url('img/Home_img2.png') }}">
+										<img src="{{ url('img/placeholder.jpg') }}">
 									@endif
 								</div>
 								<div class="hot-item-info clearfix">

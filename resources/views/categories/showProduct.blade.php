@@ -109,7 +109,7 @@
 							<div class="col-md-3">
 								<div class="related-product">
 									<div class="related-product-picture">
-										@if(count($relatedProduct->photos) < 1) <img src="{{ url('img/Home_img2.png') }}"> @else <img src="{{ url('uploads/products', $relatedProduct->photos[0]->name) }}"> @endif
+										@if(count($relatedProduct->photos) < 1) <img src="{{ url('img/placeholder.jpg') }}"> @else <img src="{{ url('uploads/products', $relatedProduct->photos[0]->name) }}"> @endif
 									</div>
 									<div class="product-name clearfix"> {{ $relatedProduct->name }}	<div class="pull-right"> €{{ $relatedProduct->prijs }} </div></div>
 								</div>

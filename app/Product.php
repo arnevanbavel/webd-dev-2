@@ -26,6 +26,10 @@ class Product extends Model
         return $this->hasMany('App\HotItem');
     }
 
+    public function Faqs(){
+        return $this->belongsToMany('App\Faq');
+    }
+
     public function getRouteKeyName()
     {
         return 'link';
