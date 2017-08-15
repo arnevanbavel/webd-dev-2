@@ -56,3 +56,11 @@ Route::post('/admin/faq/edit/{faq}', 'AdminFaqController@updateFaq');		// update
 Route::get('/admin/product/faq/edit/{product}', 'AdminFaqController@toonFaqsVoorProduct');
 Route::delete('/admin/product/faq/delete/{product}/{faqproduct}', 'AdminFaqController@verwijderenFaqVanProduct');
 Route::post('/admin/product/faq/add/{product}/{faq}', 'AdminFaqController@updateFaqVoorProduct');
+
+//zoeken faq
+Route::get('/faq', 'ZoekController@indexFaq');
+Route::post('/faq', 'ZoekController@zoekFaq');
+
+// About pagina 
+Route::get('about', 'HomeController@contact');
+Route::post('about/send', 'HomeController@sendContact');

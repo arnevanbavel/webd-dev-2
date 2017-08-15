@@ -1,0 +1,71 @@
+.about {
+    background-color: #454545;
+    color: white;
+    min-height: 100%;
+}
+
+.jumbotron {
+    height: 400px;
+    margin: 0;
+    background-image: url('/img/carousel/carous1.png');
+    background-color: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+.container .jumbotron {
+    border-radius: 0;
+}
+
+.about-contact-info ul {
+    padding: 0;
+}
+
+.about-contact-info {
+    border-left: solid 1px #5a5a5a;
+    border-bottom: solid 1px #5a5a5a;
+    padding-left: 25px;
+}
+
+.about-breadcrumb ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-breadcrumb ul li {
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.about-breadcrumb ul li:not(:first-child) {
+    background-color: #323232;
+    padding: 2px 5px 2px 5px;
+}
+
+.about-us .col-md-8, .contact .col-md-8 {
+    padding-left: 0;
+}
+
+.about-us {
+    margin-bottom: 30px;
+}
+
+.contact {
+    margin-top: 15px;
+}
+
+.contact input[type=text], .contact button {
+    width: 200px;
+}
+
+.contact textarea, .contact input[type=text], .contact button {
+    border-radius: 0;
+}
+
+.contact button {
+    background-color: #ff6f9e;
+    border-color: #ff6f9e;
+    color: white;
+}

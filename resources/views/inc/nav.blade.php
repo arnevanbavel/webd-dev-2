@@ -9,7 +9,7 @@
                         </a>
                     </li>
                     <li class="nav-normal {{ (Request::is('FAQ') ? 'active-FAQ' : '') }}">
-                        <a class="nav-FAQ" href="{{ url('/FAQ') }}">
+                        <a class="nav-FAQ" href="{{ url('/faq') }}">
                             <img src="{{ url('/img/menu/FAQ.png') }}"><strong class="nav-text">FAQ</strong>
                         </a>
                     </li>

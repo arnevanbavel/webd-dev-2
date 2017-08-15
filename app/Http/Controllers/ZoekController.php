@@ -5,9 +5,38 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Categorie;
 use App\Product;
+use DB;
 
 class ZoekController extends Controller
 {
+    public function indexFaq(Request $request)
+    {
+        if (isset($request->search)) {
+            $search = $request->search;
+
+            $faqs = DB::table('faqs')
+                    ->where('answer', 'like', '%' . $search . '%')
+                    ->orWhere('question', 'like', '%' . $search . '%')
+                    ->paginate(5);
+
+            $faqs->appends(['search' => $search]);
+
+            return view('faq')
+            ->with('faqs', $faqs)
+            ->with('search', $search);
+        }
+        else {
+            $faqs = DB::table('faqs')->paginate(5);
+
+            return view('faq')->with('faqs',$faqs);
+        }       
+    }
+
+    public function zoekFaq(Request $request)
+    {       
+        return redirect('/faq?search=' . $request->keyword);
+    }
+
     public function index(Request $request)
     {
 

@@ -7,6 +7,7 @@ use App\Subscriber;
 use Lang;
 use Mail;
 use App\HotItem;
+use App\Faq;
 use App\Categorie;
 
 class HomeController extends Controller
@@ -78,6 +79,36 @@ class HomeController extends Controller
         $language = $request->lang;
 
         return back()->withCookie(cookie()->forever('language', $language));
+    }
+
+    public function contact()
+    {
+        $faqs = Faq::all();
+        return view('about', compact('faqs'));
+    }
+
+    public function sendContact(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required|email',
+            'text' => 'required'
+        ]);
+
+        $emailFrom =  $request->email;
+        $emailText =  $request->text;
+
+
+        Mail::send('email.contact', ["emailFrom" => $emailFrom, "emailText" => $emailText], function ($message)
+        {
+
+            $message->from('arninio123@gmail.com', 'Kowloon')
+                    ->subject('Contact');
+
+            $message->to('arne.vanbavel@hotmail.com');
+
+        });
+
+        return back()->with('success', 'Contact email is succesvol verzonden!');
     }
 
 }
