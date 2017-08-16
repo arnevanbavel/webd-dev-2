@@ -14,12 +14,8 @@
     <link href="{{ asset('pageloader/pageloader.css') }}" rel="stylesheet">
 </head>
 <body>
-    @include('inc.pageloader')
     <div class="container">
-            <!--coockie-->
-            <!--coockie-->
-            <!--coockie-->
-            <!--coockie-->
+        @include('inc.cookie')
         <aside>
             @include('inc.nav')
         </aside>

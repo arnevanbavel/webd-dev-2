@@ -64,3 +64,6 @@ Route::post('/faq', 'ZoekController@zoekFaq');
 // About pagina 
 Route::get('about', 'HomeController@contact');
 Route::post('about/send', 'HomeController@sendContact');
+
+//cookie
+Route::get('/cookie', 'HomeController@cookie');
