@@ -111,4 +111,9 @@ class HomeController extends Controller
         return back()->with('success', 'Contact email is succesvol verzonden!');
     }
 
+    public function cookie()
+    {
+        return back()->withCookie(cookie()->forever('firsttime', 'OK'));
+    }
+
 }
