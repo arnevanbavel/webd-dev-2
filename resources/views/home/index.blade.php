@@ -7,14 +7,13 @@
             @include('inc.message')
             <div class="info">
                 <p>
-                Welcome to our Kowloon website. You will find all the products you need right here on Kowloon and so on... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore Duis aute irure dolor in reprehenderit in voluptate velit esse
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a leo ultrices leo faucibus vestibulum viverra eu ex. Proin a sapien augue. Maecenas id placerat libero. Pellentesque nulla quam, rutrum quis convallis sed, mattis eu neque. Integer hendrerit orci at augue dictum, ac aliquam erat vehicula. Vestibulum scelerisque, tellus in vehicula consequat, magna diam sollicitudin risus, nec dignissim enim risus ac orci. Donec ut lorem gravida, eleifend arcu ac, pretium nisi. Pellentesque quis metus iaculis, 
                 </p>
             </div>
 
             <div class="categories clearfix">
                 @foreach($categories as $categorie)
-                    <div class="category col-md-2 divider-vertical">
+                    <div class="category col-md-2 divider-vertical cat">
                         <a href="{{ url('categories', $categorie->url) }}">
                             <img src="img/menu/{{$categorie->photo}}">
                             <p>{{ $categorie->name }}</p>
@@ -49,6 +48,10 @@
                             </div>
                         </a>
                     @endforeach
+                <div class="row">
+                    <div class="col-md-12 text-right visitstore">
+                    <a href="#"><u>Visit the store</u></a>
+                    </div>
                 </div>
             </div>
 

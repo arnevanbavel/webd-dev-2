@@ -9,7 +9,7 @@
 			<div class="category-tags">
 				<ul>
 					<li><h1>K</h1></li>
-					<li>{{ $category->name }}</li>
+					<li class="tag">{{ $category->name }}s</li>
 				</ul>
 			</div>
 

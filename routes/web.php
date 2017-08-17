@@ -33,18 +33,6 @@ Route::get('language', 'HomeController@lang');
 Route::get('/search', 'ZoekController@index');
 Route::post('/search', 'ZoekController@zoek');
 
-//Admin Faq page, toevoegen, verwijderen, updaten
-Route::get('/admin/faq', 'AdminFaqController@showfaq');						//Tonen van alle faqs
-Route::get('/admin/faq/new', 'AdminFaqController@showNewFaq');				// naar pagina om een faq aan te maken
-Route::post('/admin/faq/new', 'AdminFaqController@createFaq');				//faq aanmaken
-Route::delete('/admin/faq/delete/{faq}', 'AdminFaqController@deleteFaq');	//faq verwijderen
-Route::get('/admin/faq/edit/{faq}', 'AdminFaqController@editFaq');			//naar pagina om faq aan te passen
-Route::post('/admin/faq/edit/{faq}', 'AdminFaqController@updateFaq');		// updaten van faq na het aanpassen
-
-//product linken aan faq
-Route::get('/admin/product/faq/edit/{product}', 'AdminFaqController@toonFaqsVoorProduct');
-Route::delete('/admin/product/faq/delete/{product}/{faqproduct}', 'AdminFaqController@verwijderenFaqVanProduct');
-Route::post('/admin/product/faq/add/{product}/{faq}', 'AdminFaqController@updateFaqVoorProduct');
 
 //zoeken faq
 Route::get('/faq', 'ZoekController@indexFaq');
@@ -57,7 +45,9 @@ Route::post('about/send', 'HomeController@sendContact');
 //cookie
 Route::get('/cookie', 'HomeController@cookie');
 
-Route::group(['middleware' => 'Admin'], function () {
+//enkel voor admin
+Route::group(['middleware' => 'Admin'], function () 
+{
 	//admin dashbooard
 	Route::get('/admin', 'AdminController@index');
 
@@ -68,5 +58,18 @@ Route::group(['middleware' => 'Admin'], function () {
 	Route::get('/admin/product/edit/{product}', 'AdminController@editProduct'); 		//naar pagina om aante passen
 	Route::post('/admin/product/edit/{product}', 'AdminController@updateProduct'); 		//updaten van het product na het aanpassen
 	Route::delete('/admin/product/delete/{product}', 'AdminController@deleteProduct'); 	//delete product
+
+		//Admin Faq page, toevoegen, verwijderen, updaten
+	Route::get('/admin/faq', 'AdminFaqController@showfaq');						//Tonen van alle faqs
+	Route::get('/admin/faq/new', 'AdminFaqController@showNewFaq');				// naar pagina om een faq aan te maken
+	Route::post('/admin/faq/new', 'AdminFaqController@createFaq');				//faq aanmaken
+	Route::delete('/admin/faq/delete/{faq}', 'AdminFaqController@deleteFaq');	//faq verwijderen
+	Route::get('/admin/faq/edit/{faq}', 'AdminFaqController@editFaq');			//naar pagina om faq aan te passen
+	Route::post('/admin/faq/edit/{faq}', 'AdminFaqController@updateFaq');		// updaten van faq na het aanpassen
+
+	//product linken aan faq
+	Route::get('/admin/product/faq/edit/{product}', 'AdminFaqController@toonFaqsVoorProduct');
+	Route::delete('/admin/product/faq/delete/{product}/{faqproduct}', 'AdminFaqController@verwijderenFaqVanProduct');
+	Route::post('/admin/product/faq/add/{product}/{faq}', 'AdminFaqController@updateFaqVoorProduct');
 
 });

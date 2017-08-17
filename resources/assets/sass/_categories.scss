@@ -72,6 +72,7 @@
 .btn-filter {
     background-color: $light-gray;
     color: lightgrey;
+    border-radius: 0px;
 }
 
 .btn-filter:hover {
@@ -149,9 +150,20 @@
 .category-search-filter input[type=checkbox] {
     margin-right: 5px;
 }
+.category-filter{
+    .form-control{
+        border-radius: 0px;
+    }
+}
 
 #slider {
     margin: 15px 0;
+    height: 2px;
+
+    span{
+        height: 8px;
+        width: 8px;
+    }
 }
 
 .input-symbol-euro {

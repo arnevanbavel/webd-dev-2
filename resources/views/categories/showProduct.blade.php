@@ -54,11 +54,11 @@
 				<div class="col-md-6">
 					<div class="product-info">
 
-						<div class="product-tags">
+						<div class="category-tags">
 							<ul>
 								<li><h2>K</h2></li>
-								<li>{{ $category->name }}</li>
-								<li>{{ $product->Tag->name }}</li>
+								<li class="tag">{{ $category->name }}</li>
+								<li class="tag">{{ $product->Tag->name }}</li>
 							</ul>
 						</div>
 

@@ -11,7 +11,7 @@
                         Lorum ipsum dolor sit amet...
                         <form method="POST" action="{{ url('/subscribe') }}" class="subscribe">
                             {{ csrf_field() }}
-                            <input type="text" name="email" value="{{old('email')}}"><button class="btn-primary btn-subscribe">OK</button>
+                            <input type="text" name="email" placeholder="Domain@name.com" value="{{old('email')}}"><button class="btn-primary btn-subscribe">OK</button>
                             <br>
                             @if ($errors->has('email'))
                                 <span class="form-validation"><strong>{{ $errors->first('email') }}</strong></span>

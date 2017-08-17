@@ -1,5 +1,5 @@
 .about {
-    background-color: #454545;
+    background-color: $gray;
     color: white;
     min-height: 100%;
 }
@@ -24,8 +24,8 @@
 }
 
 .about-contact-info {
-    border-left: solid 1px #5a5a5a;
-    border-bottom: solid 1px #5a5a5a;
+    border-left: solid 1px $light-gray;
+    border-bottom: solid 1px $light-gray;
     padding-left: 25px;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .about-breadcrumb ul li:not(:first-child) {
-    background-color: #323232;
+    background-color: $dark-gray;
     padding: 2px 5px 2px 5px;
 }
 
@@ -65,7 +65,7 @@
 }
 
 .contact button {
-    background-color: #ff6f9e;
-    border-color: #ff6f9e;
+    background-color: $pink;
+    border-color: $pink;
     color: white;
 }
