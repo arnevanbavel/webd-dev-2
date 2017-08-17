@@ -42000,6 +42000,10 @@ if (false) {
 
 $(document).ready(function () {
 
+    $('.click_advance').click(function () {
+        $("i", this).toggleClass("fa-caret-right fa-caret-down");
+    });
+
     var time = 5;
     var $bar, $slick, isPause, tick, percentTime;
 

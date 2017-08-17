@@ -1,4 +1,25 @@
-/* FAQ STYLING */
+
+.advanced-search{
+    padding-top: 100px;
+    input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color:    $orange;
+    }
+    input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color:    $orange;
+       opacity:  1;
+    }
+    input::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color:    #909;
+    }
+    input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color:    $orange;
+    }
+    input::-ms-input-placeholder { /* Microsoft Edge */
+       color:    $orange;
+    }
+}
+
+
 
 .FAQ-wrapper{
     background-color: #f6f6f6;
@@ -14,7 +35,7 @@
 }
 
 .FAQ-search-wrapper h1 {
-    color: #e27500;
+    color: $orange;
     margin-bottom: 25px;
 }
 

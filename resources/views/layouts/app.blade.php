@@ -7,6 +7,7 @@
     <title>Laravel</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{{ asset('slick-1.6.0/slick/slick.css') }}" rel="stylesheet">
     <link href="{{ asset('slick-1.6.0/slick/slick-theme.css') }}" rel="stylesheet">
     <link href='http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css' rel='stylesheet' type='text/css'>

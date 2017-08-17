@@ -14,7 +14,11 @@
 			</div>
 
 			<h1>{{ strtoupper($category->name) }} ARTICLES</h1>
-			<div class="toggle-button"><a class="toggle-category-filter">Filter</a></div>
+			<div class="toggle-button">
+				<a class="toggle-category-filter click_advance">Filter 
+					<i class="fa fa-caret-right fa-lg" aria-hidden="true"></i>
+				</a>
+			</div>
 			<form method="POST" action="{{ url('categories', [$category->url, 'search']) }}">
 				{{ csrf_field() }}
 				<div class="category-filter-wrapper clearfix">

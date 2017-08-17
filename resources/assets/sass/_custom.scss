@@ -16,6 +16,12 @@ body {
     padding-right: 0px;
 }
 
+.fa-caret-right{
+    color: $light-gray;
+}
+.fa-caret-down{
+    color: $light-gray;
+}
 
 .tag {
   background: $dark-gray;
@@ -65,6 +71,10 @@ body {
 .btn-primary:hover {
     background-color: $dark-gray;
     border: $dark-gray solid 1px;
+}
+
+.top-100{
+    padding-top: 100px;
 }
 
 /* NAV STYLING */

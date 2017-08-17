@@ -8369,6 +8369,14 @@ body {
   padding-right: 0px;
 }
 
+.fa-caret-right {
+  color: #5a5a5a;
+}
+
+.fa-caret-down {
+  color: #5a5a5a;
+}
+
 .tag {
   background: #323232;
   border-radius: 3px 0 0 3px;
@@ -8418,6 +8426,10 @@ body {
 .btn-primary:hover {
   background-color: #323232;
   border: #323232 solid 1px;
+}
+
+.top-100 {
+  padding-top: 100px;
 }
 
 /* NAV STYLING */
@@ -9116,7 +9128,35 @@ aside a:hover {
   margin-bottom: 10px;
 }
 
-/* FAQ STYLING */
+.advanced-search {
+  padding-top: 100px;
+}
+
+.advanced-search input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #e27500;
+}
+
+.advanced-search input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #e27500;
+  opacity: 1;
+}
+
+.advanced-search input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #909;
+}
+
+.advanced-search input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #e27500;
+}
+
+.advanced-search input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #e27500;
+}
 
 .FAQ-wrapper {
   background-color: #f6f6f6;

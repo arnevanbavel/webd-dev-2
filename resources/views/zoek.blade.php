@@ -8,7 +8,7 @@
 			<form method="POST" action="{{ url('search') }}">
 				{{ csrf_field() }}		
 				<div class="advanced-search-filter-wrapper">
-					<h3>Advanced filter <a class="toggle-search-filter">Toggle</a></h3>
+					<h3>Advanced filter <a class="toggle-search-filter click_advance"><i class="fa fa-caret-right" aria-hidden="true"></i></a></h3>
 
 					<div class="advanced-search-filter clearfix">
 						<div class="category-search-filter col-md-6">
@@ -44,7 +44,7 @@
 				</div>
 
 				<div class="advanced-search">						
-					<input type="text" name="keyword" @if(isset($search)) value="{{ $search }}" @endif placeholder="Just start typing and hit enter to search">
+					<input type="text" name="keyword" @if(isset($search)) value="{{ $search }}" @endif placeholder="&#xf002 Just start typing and hit enter to search &#xf177" style="font-family:Arial, FontAwesome">
 					<button type="submit" style="display:none;"></button>
 				</div>
 			</form>

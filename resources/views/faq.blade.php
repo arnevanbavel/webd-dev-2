@@ -10,9 +10,9 @@
 				<div class="FAQ-search">
 					<form method="POST" action="{{ url('faq') }}">
 						{{ csrf_field() }}
-						<input class="FAQ-search-input" value="@if(isset($search)) {{ $search }} @endif" type="text" name="keyword" placeholder="Search on keyword">
+						<input class="FAQ-search-input" value="@if(isset($search)) {{ $search }} @endif" type="text" name="keyword" placeholder="&#xf002 Search on keyword &#xf177" style="font-family:Arial, FontAwesome">
 					</form>
-					<a class="clear-FAQ-search pull-right" href="{{ url('FAQ') }}">Clear</a>
+					<a class="clear-FAQ-search pull-right" href="{{ url('faq') }}">Clear</a>
 				</div>
 				@if(!isset($search))
 
