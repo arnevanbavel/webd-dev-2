@@ -8432,6 +8432,14 @@ body {
   padding-top: 100px;
 }
 
+.not-100 {
+  width: 75px !important;
+}
+
+.delete {
+  border: none;
+}
+
 /* NAV STYLING */
 
 aside {
@@ -9228,26 +9236,47 @@ aside a:hover {
 .dashboard-products-wrapper,
 .dashboard-hotproducts-wrapper,
 .dashboard-faq-wrapper {
-  background-color: #f6f6f6;
+  background-color: #D8702C;
+  background: linear-gradient(135deg, #D8702C 0%, #D8702C 30%, #ffbe4b 100%) fixed;
   min-height: 100%;
 }
 
-.dashboard,
-.dashboard-products,
-.dashboard-hotproducts,
-.dashboard-faq {
+.dashboard-wrapper .dashboard,
+.dashboard-wrapper .dashboard-products,
+.dashboard-wrapper .dashboard-hotproducts,
+.dashboard-wrapper .dashboard-faq,
+.dashboard-products-wrapper .dashboard,
+.dashboard-products-wrapper .dashboard-products,
+.dashboard-products-wrapper .dashboard-hotproducts,
+.dashboard-products-wrapper .dashboard-faq,
+.dashboard-hotproducts-wrapper .dashboard,
+.dashboard-hotproducts-wrapper .dashboard-products,
+.dashboard-hotproducts-wrapper .dashboard-hotproducts,
+.dashboard-hotproducts-wrapper .dashboard-faq,
+.dashboard-faq-wrapper .dashboard,
+.dashboard-faq-wrapper .dashboard-products,
+.dashboard-faq-wrapper .dashboard-hotproducts,
+.dashboard-faq-wrapper .dashboard-faq {
   padding-top: 50px;
 }
 
-.dashboard h1,
-.dashboard-products h1,
-.dashboard-hotproducts h1,
-.dashboard-faq h1 {
-  color: #e27500;
-}
-
-.dashboard h4 a {
-  color: #333;
+.dashboard-wrapper .dashboard h1,
+.dashboard-wrapper .dashboard-products h1,
+.dashboard-wrapper .dashboard-hotproducts h1,
+.dashboard-wrapper .dashboard-faq h1,
+.dashboard-products-wrapper .dashboard h1,
+.dashboard-products-wrapper .dashboard-products h1,
+.dashboard-products-wrapper .dashboard-hotproducts h1,
+.dashboard-products-wrapper .dashboard-faq h1,
+.dashboard-hotproducts-wrapper .dashboard h1,
+.dashboard-hotproducts-wrapper .dashboard-products h1,
+.dashboard-hotproducts-wrapper .dashboard-hotproducts h1,
+.dashboard-hotproducts-wrapper .dashboard-faq h1,
+.dashboard-faq-wrapper .dashboard h1,
+.dashboard-faq-wrapper .dashboard-products h1,
+.dashboard-faq-wrapper .dashboard-hotproducts h1,
+.dashboard-faq-wrapper .dashboard-faq h1 {
+  color: #323232;
 }
 
 .FAQ-edit {
@@ -9277,8 +9306,6 @@ aside a:hover {
   background-color: white;
   margin: 15px 0;
   padding: 15px;
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
 .products-table ul,

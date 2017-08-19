@@ -30,11 +30,11 @@ class AdminFaqController extends Controller
         ]);
 
         $faq = new Faq();
-
         $faq->question = $request->question;
         $faq->answer = $request->answer;
 
-        if (!$faq->save()) {
+        if (!$faq->save()) 
+        {
             return redirect('admin/faq')->with('error', 'FAQ is niet succesvol aangemaakt.');
         }
 
@@ -45,7 +45,6 @@ class AdminFaqController extends Controller
     public function deleteFaq(Faq $faq)
     {
         $faq->delete();
-
         return back()->with('success', 'FAQ is succesvol verwijderd.');
     }
 
@@ -63,7 +62,6 @@ class AdminFaqController extends Controller
 
         $faq->question = $request->question;
         $faq->answer = $request->answer;
-
         $faq->save();
 
         return redirect('admin/faq')->with('success', 'FAQ is succesvol gewijzigd.');
@@ -82,7 +80,6 @@ class AdminFaqController extends Controller
         $faqProduct = new FaqProduct();
         $faqProduct->product_id = $product;
         $faqProduct->faq_id = $faq;
-
         $faqProduct->save();
 
         return back()->with('success', 'FAQ is succesvol aangewezen.');
@@ -91,7 +88,6 @@ class AdminFaqController extends Controller
     public function verwijderenFaqVanProduct(Product $product, $faqproduct)
     {
         $product->Faqs()->detach($faqproduct);
-
         return back()->with('success', 'FAQ is succesvol verwijderd van het product.');
     }
 

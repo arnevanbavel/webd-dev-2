@@ -54,17 +54,17 @@ class HomeController extends Controller
                 return "Subscriber not saved successfully";
             }
 
-                /*$emailTo =  $subscriber->email;
+                $emailTo =  $subscriber->email;
 
-                Mail::send('email.subs', [], function ($message)
+                Mail::send('email.subs', [], function ($message) use ($emailTo)
                 {
 
                     $message->from('arninio123@gmail.com', 'Kowloon')
                             ->subject('Subscribed to Kowloon newsletter');
 
-                    $message->to('arne.vanbavel@hotmail.com');
+                    $message->to($emailTo);
 
-                });*/
+                });
         }
         else
         {
@@ -104,7 +104,7 @@ class HomeController extends Controller
             $message->from('arninio123@gmail.com', 'Kowloon')
                     ->subject('Contact');
 
-            $message->to('arne.vanbavel@hotmail.com');
+            $message->to('arninio123@gmail.com');
 
         });
 

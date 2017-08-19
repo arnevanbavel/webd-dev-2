@@ -49,7 +49,7 @@ class AdminController extends Controller
             'category_id' 				=> 'required',
             'tag_id' 					=> 'required',
             'uitleg' 					=> 'required',
-            //'photo' 					=> 'required|mimes:jpg,jpeg,png|max:5120',
+            //'photo' 					=> 'required|image|max:5120',
             'color_id' 					=> 'required'
         ]);
 
@@ -69,20 +69,21 @@ class AdminController extends Controller
         if (!$product->save()) {
             return redirect('admin/products')->with('error', 'Product is niet succesvol aangemaakt.');
         }
+        if (isset($files)) {
+            foreach ($files as $file) {
 
-        foreach ($files as $file) {
+                $imageName = $file->getClientOriginalName();
+                $imageName = rand(0, 10000) . $imageName;
+                $file->move(base_path() . '/public/uploads/products', $imageName);
 
-            $imageName = $file->getClientOriginalName();
-            $imageName = rand(0, 10000) . $imageName;
-            $file->move(base_path() . '/public/uploads/products', $imageName);
+                $photo = new Photo();
 
-            $photo = new Photo();
+                $photo->name = $imageName;
+                $photo->product_id = $product->id;
 
-            $photo->name = $imageName;
-            $photo->product_id = $product->id;
-
-            $photo->save();
-          
+                $photo->save();
+              
+            }
         }
 
         $GeselecteerdeKleuren = $request->color_id;
@@ -112,8 +113,8 @@ class AdminController extends Controller
             'categorie_id' => 'required',
             'tag_id' => 'required',
             'uitleg' => 'required',
-            'color_id' => 'required',
-            'photo' => 'mimes:jpg,jpeg,png|max:5120'
+            'color_id' => 'required'
+            //'photo' => 'mimes:jpg,jpeg,png|max:5120'
         ]);
 
         $product->name = $request->name;
@@ -222,6 +223,8 @@ class AdminController extends Controller
 
         $hotItem->save();        
 
+                echo "string";
+        break;
         return redirect('admin/products')->with('success', 'Product is succesvol aangepast.');
     }
 

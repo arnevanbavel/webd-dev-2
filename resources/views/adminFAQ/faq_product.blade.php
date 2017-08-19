@@ -35,7 +35,7 @@
 													{{ csrf_field() }}
 													<input type="hidden" name="_method" value="DELETE" />
 													<button type="submit" class="btn btn-danger" aria-label="Left Align">
-													  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+													  Delete
 													</button>
 												</form>
 											</li>
@@ -77,7 +77,7 @@
 												<form method="POST" action="{{ url('admin/product/faq/add', [$product->id, $faq->id]) }}">
 													{{ csrf_field() }}
 													<button type="submit" class="btn btn-success" aria-label="Left Align">
-													  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+													  Add
 													</button>
 												</form>
 											</li>
