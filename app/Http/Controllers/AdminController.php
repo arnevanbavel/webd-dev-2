@@ -223,8 +223,6 @@ class AdminController extends Controller
 
         $hotItem->save();        
 
-                echo "string";
-        break;
         return redirect('admin/products')->with('success', 'Product is succesvol aangepast.');
     }
 
