@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 19 aug 2017 om 15:35
+-- Gegenereerd op: 19 aug 2017 om 18:44
 -- Serverversie: 10.1.21-MariaDB
 -- PHP-versie: 5.6.30
 
@@ -66,7 +66,11 @@ CREATE TABLE `colors` (
 --
 
 INSERT INTO `colors` (`id`, `name`, `code`, `created_at`, `updated_at`) VALUES
-(1, 'red', '#FF0000', NULL, NULL);
+(1, 'red', '#FF0000', NULL, NULL),
+(2, 'green', '#008000', NULL, NULL),
+(3, 'blue', '#0000FF', NULL, NULL),
+(4, 'black', '#000000', NULL, NULL),
+(5, 'yellow', '#FFFF00', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -421,7 +425,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT voor een tabel `colors`
 --
 ALTER TABLE `colors`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT voor een tabel `color_product`
 --
